@@ -31,6 +31,9 @@ This is small video of my work.
 
 https://user-images.githubusercontent.com/52541749/204633285-7a3427e4-7213-4f15-beb4-3ce2e576e7d5.mp4
 
+```
+
+
 
 ```
 Explanation of files present in code. 
@@ -45,9 +48,17 @@ ScreenShotsFolder -> There are 4 folders for every url which basically store all
 
 Util -> This is utility section.
     1) ExtractJSON -> It help to extract JSON.
+    
     2) fetchHTMLFromEveryExtractURLsByVisiting -> It help in extract html, base64_image, current url of every root urls and help in storing the data in OutputDataJSON 
        and ScreenShotFolder and also help in storing data in mongo as shown in video.
+       
     3) fetchDriver -> It is basically for fetching the driver.
+    
     4) ExtractURLsByVisiting -> It is basically Storm crawler which help me to fetch all the child urls from the root url in BFS format.
 
 Main -> It is main file which is running the application.
+
+DockerFile -> It basically use for deployment
+```
+
+
