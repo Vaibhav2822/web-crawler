@@ -24,3 +24,30 @@ storm local target/webCrawler-1.0-SNAPSHOT.jar  org.apache.storm.flux.Flux crawl
 Note that in local mode, Flux uses a default TTL for the topology of 20 secs. The command above runs the topology for 1 hour.
 
 It is best to run the topology with `storm jar` to benefit from the Storm UI and logging. In that case, the topology runs continuously, as intended.
+
+
+```
+This is small video of my work.
+
+https://user-images.githubusercontent.com/52541749/204633285-7a3427e4-7213-4f15-beb4-3ce2e576e7d5.mp4
+
+
+```
+Explanation of files present in code. 
+
+Dataset File: seed_url.json -> From this file I am fetch all the root URLs in queue.
+
+ExtractHTMLFromURLS -> In this file there 4 java files for every root URL. And in these files I am basically extracting my json data and using that to extract HTML and screenshots
+
+OutputDataJSON -> There are 4 files for every URL where I am storing output in JSON format like seed_url, current_url, html for that page and base64_image.
+
+ScreenShotsFolder -> There are 4 folders for every url which basically store all .png or .jpg format extention files.
+
+Util -> This is utility section.
+    1) ExtractJSON -> It help to extract JSON.
+    2) fetchHTMLFromEveryExtractURLsByVisiting -> It help in extract html, base64_image, current url of every root urls and help in storing the data in OutputDataJSON 
+       and ScreenShotFolder and also help in storing data in mongo as shown in video.
+    3) fetchDriver -> It is basically for fetching the driver.
+    4) ExtractURLsByVisiting -> It is basically Storm crawler which help me to fetch all the child urls from the root url in BFS format.
+
+Main -> It is main file which is running the application.
