@@ -17,7 +17,7 @@ public class fetchHTMLAndScreenshotsFromUschamber {
         JSONArray jsonArray = extractJSON.ExtractJSON();
         String mainUrl = (String) jsonArray.get(1);
         fetchHTMLFromEveryExtractURLsByVisitingURLs fetchDetails = new fetchHTMLFromEveryExtractURLsByVisitingURLs();
-        fetchDetails.extractHTML(mainUrl,domainName,OutputJSON,ScreenShotFileName);
+        fetchDetails.extractHTML(mainUrl,domainName,OutputJSON,ScreenShotFileName,OutputJSON);
     }
 
 }

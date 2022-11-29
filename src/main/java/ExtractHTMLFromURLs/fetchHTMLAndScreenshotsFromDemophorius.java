@@ -17,6 +17,6 @@ public class fetchHTMLAndScreenshotsFromDemophorius {
         JSONArray jsonArray = extractJSON.ExtractJSON();
         String mainUrl = (String) jsonArray.get(2);
         fetchHTMLFromEveryExtractURLsByVisitingURLs fetchDetails = new fetchHTMLFromEveryExtractURLsByVisitingURLs();
-        fetchDetails.extractHTML(mainUrl,domainName,OutputJSON,ScreenShotFileName);
+        fetchDetails.extractHTML(mainUrl,domainName,OutputJSON,ScreenShotFileName,OutputJSON);
     }
 }

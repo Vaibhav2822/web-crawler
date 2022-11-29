@@ -1,0 +1,25 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: Vaibhav_2408
+      MONGO_INITDB_ROOT_PASSWORD: vaibhav2000
+    ports:
+      - 3306:3306
+
+
+  docker-webCrawler-example:
+    image: docker
+    ports:
+      - 8086:8086
+    restart: unless-stopped
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - mongo
