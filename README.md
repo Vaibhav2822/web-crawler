@@ -72,4 +72,11 @@ Took References from
 1) Google
 2) Youtube
 3) Articles
-4) Documentation of WebCrawler
+4) Documentation of WebCrawler, Docker
+
+TechStack Used:
+1) Selenium
+2) WebCrawler
+3) Docker
+4) Java
+5) MongoDB
